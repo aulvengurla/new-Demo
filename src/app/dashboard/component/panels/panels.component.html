@@ -1,0 +1,121 @@
+<div class="container">
+  <app-navbar title="Panels"></app-navbar>
+  <div class="row page-title">
+     
+    <div class="col-md-12">
+      <div class="card">
+        <h4>Navigation Pills - <small>Vertical Tabs</small></h4>
+        <div class="row v-tab page-title">
+          <div class="col-md-2">
+            <button mat-raised-button class="btn btn-info btn-round btn-block tab-link default-active" (click)="vTabClick($event, 'one')">PROFILE</button>
+            <button mat-raised-button class="btn btn-info btn-round btn-block tab-link" (click)="vTabClick($event, 'two')">SETTINGS</button>
+            <button mat-raised-button class="btn btn-info btn-round btn-block tab-link" (click)="vTabClick($event, 'three')">OPTIONS</button>
+          </div>
+          <div class="col-md-10">
+            <div id="one" class="tab-content">
+              Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits.<br/><br/>
+              Dramatically visualize customer directed convergence without revolutionary ROI. Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits.<br/><br/>
+              This is very nice.
+            </div>
+            <div id="two" class="tab-content">
+                <form>
+                    <div class="row">
+                        <div class="col-md-4">
+                          <mat-form-field color="accent">
+                            <input matInput type="text" placeholder="First Name">
+                          </mat-form-field>
+                        </div>
+                        <div class="col-md-4">
+                          <mat-form-field color="accent">
+                            <input matInput type="text" placeholder="Last name">
+                          </mat-form-field>
+                        </div>
+                        <div class="col-md-4">
+                          <mat-form-field color="accent">
+                            <input matInput type="text" placeholder="Mobile No">
+                          </mat-form-field>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                          <div class="col-md-4">
+                            <mat-form-field color="accent">
+                              <input matInput type="text" placeholder="City">
+                            </mat-form-field>
+                          </div>
+                          <div class="col-md-4">
+                            <mat-form-field color="accent">
+                              <input matInput type="text" placeholder="Country">
+                            </mat-form-field>
+                          </div>
+                          <div class="col-md-4">
+                            <mat-form-field color="accent">
+                              <input matInput type="text" placeholder="Postcode">
+                            </mat-form-field>
+                          </div>
+                        </div> 
+                    <div class="row action-btn">
+                      <button md-raised-button type="submit" class="btn btn-info">Search</button>&nbsp;
+                      <button md-raised-button type="submit" class="btn btn-info">Reset</button>                          
+                      <button md-raised-button type="submit" class="btn">Cancel</button>
+                    </div>
+                  </form>
+            </div>
+            <div id="three" class="tab-content">
+             
+                <table class="table">
+                    <thead class="text-primary">
+                      <tr>
+                        <th>First Name</th>
+                        <th>Country</th>
+                        <th>City</th>
+                        <th>Salary</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Dakota Rice</td>
+                        <td>Niger</td>
+                        <td>Oud-Turnhout</td>
+                        <td class="text-primary">$36,738</td>
+                      </tr>
+                      <tr>
+                        <td>Minerva Hooper</td>
+                        <td>Curaçao</td>
+                        <td>Sinaai-Waas</td>
+                        <td class="text-primary">$23,789</td>
+                      </tr>
+                      <tr>
+                        <td>Sage Rodriguez</td>
+                        <td>Netherlands</td>
+                        <td>Baileux</td>
+                        <td class="text-primary">$56,142</td>
+                      </tr>
+                      <tr>
+                        <td>Philip Chaney</td>
+                        <td>Korea, South</td>
+                        <td>Overland Park</td>
+                        <td class="text-primary">$38,735</td>
+                      </tr>
+                      <tr>
+                        <td>Doris Greene</td>
+                        <td>Malawi</td>
+                        <td>Feldkirchen in Kärnten</td>
+                        <td class="text-primary">$63,542</td>
+                      </tr>
+                      <tr>
+                        <td>Mason Porter</td>
+                        <td>Chile</td>
+                        <td>Gloucester</td>
+                        <td class="text-primary">$78,615</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,104 @@
+<div class="container">
+    <app-navbar title="Table List"></app-navbar>
+    <div style="background-color: #1976d2;height: 300px;margin-top: 30px;">
+        <div>
+            <div class="title">All-In-One Table</div>
+            <div class="sub-title">Dashboard >> Country</div>
+            <div class="col-md-12" style="padding-top: 20px;">
+              <div class="card">
+                <div class="card-header" style="width: 95%;height: auto; color: white;border:1px solid black;"> 
+                    <form>
+                        <div class="row">
+                            <div class="col-md-4">
+                              <mat-form-field color="accent">
+                                <input matInput type="text" placeholder="First Name">
+                              </mat-form-field>
+                            </div>
+                            <div class="col-md-4">
+                              <mat-form-field color="accent">
+                                <input matInput type="text" placeholder="Last name">
+                              </mat-form-field>
+                            </div>
+                            <div class="col-md-4">
+                              <mat-form-field color="accent">
+                                <input matInput type="text" placeholder="Mobile No">
+                              </mat-form-field>
+                            </div>
+                          </div>
+    
+                          <div class="row">
+                              <div class="col-md-4">
+                                <mat-form-field color="accent">
+                                  <input matInput type="text" placeholder="City">
+                                </mat-form-field>
+                              </div>
+                              <div class="col-md-4">
+                                <mat-form-field color="accent">
+                                  <input matInput type="text" placeholder="Country">
+                                </mat-form-field>
+                              </div>
+                              <div class="col-md-4">
+                                <mat-form-field color="accent">
+                                  <input matInput type="text" placeholder="Postcode">
+                                </mat-form-field>
+                              </div>
+                            </div> 
+                        <div class="row action-btn">
+                          <button md-raised-button type="submit" class="btn btn-info">Search</button>&nbsp;
+                          <button md-raised-button type="submit" class="btn btn-info">Reset</button>                          
+                          <button md-raised-button type="submit" class="btn">Cancel</button>
+                        </div>
+                      </form>
+                </div>
+                <div class="card-content" style="margin-top: 200px;"> 
+                  <!--<h4 class="card-title">Simple Table</h4>-->
+                  <button md-raised-button type="submit" class="btn btn-info" style="float: right;">Add</button>
+                  <br/><br/>
+                  <div class="table-responsive">
+                      <mat-form-field>
+                          <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+                        </mat-form-field> 
+
+                        <div>
+                          <table mat-table [dataSource]="dataSource" matSort>
+                        
+                            <!-- ID Column -->
+                            <ng-container matColumnDef="id">
+                              <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
+                              <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+                            </ng-container>
+                         
+                            <!-- Progress Column -->
+                            <ng-container matColumnDef="progress">
+                              <th mat-header-cell *matHeaderCellDef mat-sort-header> Progress </th>
+                              <td mat-cell *matCellDef="let row"> {{row.progress}}% </td>
+                            </ng-container>
+                        
+                            <!-- Name Column -->
+                            <ng-container matColumnDef="name">
+                              <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+                              <td mat-cell *matCellDef="let row"> <img src="../../../assets/img/avatar5.png" width="40px;" style="border-radius: 50%;"/> {{row.name}} </td>
+                            </ng-container>
+                        
+                            <!-- Color Column -->
+                            <ng-container matColumnDef="color">
+                              <th mat-header-cell *matHeaderCellDef mat-sort-header> Color </th>
+                              <td mat-cell *matCellDef="let row" [style.color]="row.color"> {{row.color}} </td>
+                            </ng-container>
+                        
+                            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                            <tr mat-row *matRowDef="let row; columns: displayedColumns;">
+                            </tr>
+                          </table>
+                        
+                          <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+                        </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+  
+    
+  </div>  

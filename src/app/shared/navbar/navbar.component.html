@@ -1,0 +1,26 @@
+<div style="background-color: #3c8dbc;"> 
+  <div class="left-part">
+    <div style=" color:white;background-color:#3c8dbc;margin-left:350px;padding: 10px 40px 10px 40px;">
+       <b>Name : </b>Alec Thompson <br/>
+       <b>Designation :</b> CO-FOUNDER
+    </div>
+  </div>
+  <div>
+    <div class="right-part" id="nav-right">
+
+      <app-msgiconbtn icon="notifications" number="5" [matMenuTriggerFor]="menu" style="padding-right: 20px;" ></app-msgiconbtn>
+      <button mat-icon-button><img  width="40px;" style="border-radius: 50%;" src="../../../assets/img/avatar5.png"/></button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>Mike John responded to your email</button>
+        <button mat-menu-item>You have 5 new tasks</button>
+        <button mat-menu-item>You're now friend with Andrew</button>
+        <button mat-menu-item>Another Notification</button>
+        <button mat-menu-item>Another One</button>
+      </mat-menu>
+    </div>
+    <div id="menu">
+      <button mat-icon-button (click)="menuClick()"><i class="material-icons">menu</i></button>
+    </div>
+  </div>
+</div>
+<br /><br />
